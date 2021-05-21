@@ -18,4 +18,8 @@ Route::prefix('v1')->group(function () {
     Route::get('/test', function(){
         return 'test api is work';
     });
+    Route::namespace('Api')->group(function () {
+        Route::post('feedback' , 'FeedbackController@addSupport');
+    });
+    
 });
