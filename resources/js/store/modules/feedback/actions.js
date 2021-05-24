@@ -1,11 +1,11 @@
 import httpService from '../../../services/common/httpService';
 
 export default {
-    testFeedback: (context) => {
+    sendFeedback: (context , data) => {
         return new Promise((resolve, reject) => {
-            httpService.get('/test')
+            httpService.post('/feedback' , data)
             .then((response) => {
-                context.commit('TEST' , response.data)
+                context.commit('SET_STATUS' , response.data)
                 resolve(response.data);
             })
             .catch(function (err) {

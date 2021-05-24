@@ -1,7 +1,5 @@
 export default {
-
-    TEST: (state, data) => {
-        state.feedback = data;
+    SET_STATUS: (state, data) => {
+        state.status = data.data;
     },
-
 }
