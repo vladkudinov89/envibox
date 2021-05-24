@@ -8,17 +8,25 @@ Install the following packages prior to standing up your development environment
 - [docker](https://docs.docker.com/engine/installation/)
 - [docker-compose](https://docs.docker.com/compose/install/)
 
-Set your .env vars and then type:
+Type in terminal:
 ```
 git clone <this_repo>
-cp .env.example .env
-docker-compose up -d
-docker-compose exec app composer install
-docker-compose exec frontend npm install
-docker-compose exec frontend npm run watch-poll
+make init
 ```
 ## Usage
-
+Add start in address :
+```
+http://localhost/
+```
 To start your containers you have only type next command:
 ```
 make docker-up
+```
+To stop your containers you have only type next command:
+```
+make docker-down
+```
+To see test type next command:
+```
+make test
+```
