@@ -19,7 +19,7 @@ Route::prefix('v1')->group(function () {
         return 'test api is work';
     });
     Route::namespace('Api')->group(function () {
-        Route::post('feedback' , 'FeedbackController@addSupport');
+        Route::post('feedback' , 'FeedbackController@addFeedback');
     });
     
 });
